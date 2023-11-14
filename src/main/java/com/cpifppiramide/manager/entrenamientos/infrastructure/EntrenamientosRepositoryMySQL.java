@@ -44,6 +44,8 @@ public class EntrenamientosRepositoryMySQL implements EntrenamientosRepository {
                     entrenamiento.setEjercicios(ejercicios); //la misma dirección de memoria le va al entrenamiento
                     entrenamientos.add(entrenamiento); //añado a la lista que devolveré
                 }
+
+
                 mapaEntrenamientos.get(entrenamiento).add(ejercicio);
             }
         } catch (SQLException e) {
