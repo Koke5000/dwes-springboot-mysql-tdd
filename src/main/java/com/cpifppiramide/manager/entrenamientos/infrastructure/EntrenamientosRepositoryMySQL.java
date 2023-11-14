@@ -22,6 +22,7 @@ public class EntrenamientosRepositoryMySQL implements EntrenamientosRepository {
                     "from entrenamientos en " +
                     "left join entrenamientos_ejercicios ee on ee.entrenamiento = en.id " +
                     "left join ejercicios ej on ej.id = ee.ejercicio";
+
             PreparedStatement preparedStatement = DBConnection.getInstance().prepareStatement(query);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()){
