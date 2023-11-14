@@ -35,6 +35,9 @@ public class EntrenamientosRepositoryMySQL implements EntrenamientosRepository {
                     rs.getInt("ejercicio_id"),
                         rs.getString("titulo")
                 );
+
+
+
                 if(!mapaEntrenamientos.containsKey(entrenamiento)){
                     List<Ejercicio> ejercicios = new ArrayList<>(); //instancio una lista de ejercicios
                     mapaEntrenamientos.put(entrenamiento, ejercicios); //esa lista se la meto al mapa
