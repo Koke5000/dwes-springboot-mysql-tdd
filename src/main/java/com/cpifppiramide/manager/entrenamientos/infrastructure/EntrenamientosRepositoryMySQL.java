@@ -25,6 +25,7 @@ public class EntrenamientosRepositoryMySQL implements EntrenamientosRepository {
 
             PreparedStatement preparedStatement = DBConnection.getInstance().prepareStatement(query);
             ResultSet rs = preparedStatement.executeQuery();
+
             while (rs.next()){
                 Entrenamiento entrenamiento = new Entrenamiento(
                     rs.getInt("id"),
